@@ -34,22 +34,13 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 2. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
 
-### Instructions
+3. The environment file needs to be placed in the repository folder and unzipped or decompressed.
 
-Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
-
-### (Optional) Challenge: Learning from Pixels
-
-After you have successfully completed the project, if you're looking for an additional challenge, you have come to the right place!  In the project, your agent learned from information such as its velocity, along with ray-based perception of objects around its forward direction.  A more challenging task would be to learn directly from pixels!
-
-To solve this harder task, you'll need to download a new Unity environment.  This environment is almost identical to the project environment, where the only difference is that the state is an 84 x 84 RGB image, corresponding to the agent's first-person view.  (**Note**: Udacity students should not submit a project with this new environment.)
-
-You need only select the environment that matches your operating system:
-- Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip)
-- Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana.app.zip)
-- Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86.zip)
-- Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86_64.zip)
-
-Then, place the file in the `p1_navigation/` folder in the DRLND GitHub repository, and unzip (or decompress) the file.  Next, open `Navigation_Pixels.ipynb` and follow the instructions to learn how to use the Python API to control the agent.
-
-(_For AWS_) If you'd like to train the agent on AWS, you must follow the instructions to [set up X Server](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above.
+### Solution
+The solution has the following structure:
+1. Navigation.ipynb: contains the code to set up the environment and the training loop in order to train the agent to navigate and collect bananas
+2. agent.py: contains the definition of the agent. It can be parametrized to use simple DQN or DDQN, standard experience replay or prioritized experience replay, dueling or non-dueling mode
+3. model.py: contains the definition of the feedforward network behind the agent
+4. per.py: contains the implementation for Prioritiez Experience Replay
+5. replay_buffer.py: contains the implementation for standar Replay Buffer
+6. dqn_unity.py: contains the training loop for Unity environment
